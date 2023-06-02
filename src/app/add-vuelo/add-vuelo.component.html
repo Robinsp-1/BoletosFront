@@ -1,0 +1,144 @@
+<div class="container">
+  <h2>Actualizar Vuelo</h2>
+  <form (ngSubmit)="onUpdate()">
+    <div class="form-group">
+      <label for="fechaSalida">Fecha de Salida</label>
+      <input type="date" class="form-control" id="fechaSalida" [(ngModel)]="nuevoVuelo.fechaSalida" name="fechaSalida" required>
+    </div>
+
+    <div class="form-group">
+      <label for="horaSalida">Hora de Salida</label>
+      <input type="time" class="form-control" id="horaSalida" [(ngModel)]="nuevoVuelo.horaSalida" name="horaSalida" required>
+    </div>
+
+    <div class="form-group">
+      <label for="fechaLlegada">Fecha de Llegada</label>
+      <input type="date" class="form-control" id="fechaLlegada" [(ngModel)]="nuevoVuelo.fechaLlegada" name="fechaLlegada" required>
+    </div>
+
+    <div class="form-group">
+      <label for="horaLlegada">Hora de Llegada</label>
+      <input type="time" class="form-control" id="horaLlegada" [(ngModel)]="nuevoVuelo.horaLlegada" name="horaLlegada" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lugarSalida">Lugar de Salida</label>
+      <input type="text" class="form-control" id="lugarSalida" [(ngModel)]="nuevoVuelo.lugarSalida" name="lugarSalida" required>
+
+    </div>
+
+    <div class="form-group">
+      <label for="lugarDestino">Lugar de Destino</label>
+      <input type="text" class="form-control" id="lugarDestino" [(ngModel)]="nuevoVuelo.lugarDestino" name="lugarDestino" required>
+    </div>
+
+    <div class="form-group">
+      <label for="horaAbordaje">Hora de Abordaje</label>
+      <input type="time" class="form-control" id="horaAbordaje" [(ngModel)]="nuevoVuelo.horaAbordaje" name="horaAbordaje" required>
+    </div>
+
+    <div class="form-group">
+      <label for="idVuelo">ID de Vuelo</label>
+      <input type="number" class="form-control" id="idVuelo" [(ngModel)]="nuevoVuelo.idVuelo" name="idVuelo" required readonly>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+  </form>
+</div>
+
+
+<!-- <div class="container" *ngIf="producto">
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="F_salida">Fecha Salida</label>
+            <input type="date" class="form-control" id="F_salida" name="F_salida" [(ngModel)]="nuevoVuelo.fechaSalida" required>
+          </div>
+          <div class="form-group">
+            <label for="H_salida">Hora Salida</label>
+            <input type="text" class="form-control" id="H_salida" name="H_salida" [(ngModel)]="nuevoVuelo.horaSalida" required>
+          </div>
+          <div class="form-group">
+            <label for="F_llegada">Fecha Llegada</label>
+            <input type="String" class="form-control" id="F_llegada" name="F_llegada" [(ngModel)]="nuevoVuelo.fechaLlegada" required>
+          </div>
+          <div class="form-group">
+            <label for="H_llegada">Hora Llegada</label>
+            <input type="text" class="form-control" id="H_llegada" name="H_llegada" [(ngModel)]="nuevoVuelo.horaLlegada" required>
+          </div>
+          <div class="form-group">
+            <label for="L_salida">Lugar De Salida</label>
+            <input type="text" class="form-control" id="L_salida" name="L_salida" [(ngModel)]="nuevoVuelo.lugarSalida" required>
+          </div>
+          <div class="form-group">
+            <label for="L_Destino">Lugar De Destino</label>
+            <input type="text" class="form-control" id="L_Destino" name="L_Destino" [(ngModel)]="nuevoVuelo.lugarDestino" required>
+          </div>
+          <div class="form-group">
+            <label for="H_abordaje">Hora Abordaje</label>
+            <input type="text" class="form-control" id="H_abordaje" name="H_abordaje" [(ngModel)]="nuevoVuelo.horaAbordaje" required>
+          </div>
+          <div class="form-group">
+            <label for="Id_Vuelo">Id_Vuelo</label>
+            <input type="text" class="form-control" id="Id_Vuelo" name="Id_Vuelo" [(ngModel)]="nuevoVuelo.idVuelo" required>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-outline-success" [disabled]="!f.valid">Actualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+   -->
+<!-- <div class="container" *ngIf="producto">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="F_salida">Fecha Salida</label>
+                    <input type="date" class="form-control" id="F_salida" name="F_salida"
+                    [(ngModel)]="nuevoVuelo.fechaSalida" required>
+                </div>
+                <div class="form-group">
+                    <label for="H_salida">Hora Salida</label>
+                    <input type="string" class="H_salida" id="precio" name="H_salida"
+                    [(ngModel)]="nuevoVuelo.horaSalida" required>
+                </div>
+                <div class="form-group">
+                    <label for="F_llegada">Fecha Llegada</label>
+                    <input type="date" class="form-control" id="F_llegada" name="F_llegada"
+                    [(ngModel)]="nuevoVuelo.fechaLlegada" required>
+                </div>
+                <div class="form-group">
+                    <label for="H_llegada">Hora Llegada</label>
+                    <input type="string" class="form-control" id="H_llegada" name="H_llegada"
+                    [(ngModel)]="nuevoVuelo.horaLlegada" required>
+                </div>
+                <div class="form-group">
+                    <label for="L_salida">Lugar De Salida</label>
+                    <input type="string" class="form-control" id="L_salida" name="L_salida"
+                    [(ngModel)]="nuevoVuelo.lugarSalida" required>
+                </div>
+                <div class="form-group">
+                    <label for="L_Destino">Lugar De Destino</label>
+                    <input type="string" class="form-control" id="L_Destino" name="L_Destino"
+                    [(ngModel)]="nuevoVuelo.lugarDestino" required>
+                </div>
+                <div class="form-group">
+                    <label for="H_abordaje">Hora Abordaje</label>
+                    <input type="string" class="form-control" id="H_abordaje" name="H_abordaje"
+                    [(ngModel)]="nuevoVuelo.horaAbordaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="Id_Vuelo">Id_Vuelo</label>
+                    <input type="String" class="form-control" id="Id_Vuelo" name="Id_Vuelo"
+                    [(ngModel)]="nuevoVuelo.idVuelo" required>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-success" [disabled]="!f.valid">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
