@@ -12,21 +12,15 @@ import { EditarReservaComponent } from './Reservas/Editar Reserva/editar-reserva
 
 const routes: Routes = [
 
-  { path: '', component: VuelosListarComponentComponent },
+  {  path: '', redirectTo: 'principal', pathMatch: 'full' },
 
-  {path: 'listar', component: VuelosListarComponentComponent},
-
-  {path: 'editar/:id', component: VuelosEditatComponent},
-
-  {path: 'Ingresar', component: AddVueloComponent},
-
-   {path: 'editares/:id', component: EditarReservaComponent},
-
-  {path: 'listares', component: ListarReservaComponent},
-
-  {path: 'Ingresares', component: AgregarReservaComponent},
-
-  {path: 'principal', component: PaginaPrincipalComponent}
+  { path: 'listar', component: VuelosListarComponentComponent },
+  { path: 'editar/:id', component: VuelosEditatComponent },
+  { path: 'Ingresar', component: AddVueloComponent },
+  { path: 'editares/:id', component: EditarReservaComponent },
+  { path: 'listares', component: ListarReservaComponent },
+  { path: 'Ingresares', component: AgregarReservaComponent },
+  { path: 'principal', component: PaginaPrincipalComponent }
 
 
 

@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        if (event.url === '/Ingresar' || event.url === '/editar/:' || event.url === '/principal' || event.url === '/Ingresares') {
+        if (event.url === '/Ingresar' || event.url === '/editar/:id' || event.url === '/Ingresares') {
           this.mostrarBarraNavegacion = false;
         } else {
           this.mostrarBarraNavegacion = true;

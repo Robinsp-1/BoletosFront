@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Editar Reserva</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<div class="text-bg-success p-3">Editar Reserva</div>
+<br>
+<body>
+  <div class="container">
+
+    <form (ngSubmit)="actualizarReserva()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="asiento">Asiento</label>
+        <input type="text" class="form-control" id="asiento" [(ngModel)]="editarreserva.asiento" name="asiento" required>
+      </div>
+      <div class="form-group">
+        <label for="claseVuelo">Clase Vuelo</label>
+        <input type="text" class="form-control" id="claseVuelo" [(ngModel)]="editarreserva.claseVuelo" name="claseVuelo" required>
+      </div>
+      <div class="form-group">
+        <label for="idEquipaje">ID Equipaje</label>
+        <input type="number" class="form-control" id="idEquipaje" [(ngModel)]="editarreserva.equipaje.idEquipaje " name="idEquipaje" required>
+      </div>
+      <div class="form-group">
+        <label for="idPasajero">ID Pasajero</label>
+        <input type="number" class="form-control" id="idPasajero" [(ngModel)]="editarreserva.pasajero.idPasajero" name="idPasajero" required>
+      </div>
+      <div class="form-group">
+        <label for="idVuelo">ID Vuelo</label>
+        <input type="number" class="form-control" id="idVuelo" [(ngModel)]="editarreserva.vuelo.idVuelo" name="idVuelo" required>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        Se está editando una Reserva
+      </div>
+      <button type="submit" class="btn btn-outline-primary btn-block" [disabled]="!f.valid">Ingresar</button>
+      <a routerLink="/listares" class="btn btn-outline-danger btn-block">Cancelar</a>
+      <br>
+      <br>
+    </form>
+  </div>
+</body>
+</html>

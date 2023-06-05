@@ -13,13 +13,10 @@ import { Observable } from 'rxjs';
   
     constructor(private http: HttpClient, private httpClient: HttpClient) {}
   
-    urlListarVUelos = "http://localhost:8080/vuelos/listarvuelos"
-    urlGoat = "http://localhost:8080/vuelos/"
+    urlListarVUelos = "http://localhost:8080/vuelos/listarvuelos";
+    urlGoat = "http://localhost:8080/vuelos/";
   
-    //getListaVuelos() {
-     // return this.http.get<Vuelos>(this.urlListarVUelos);
-   // }
-  
+   
     public listaVuelos(): Observable<Vuelos[]> {
       return this.httpClient.get<Vuelos[]>(this.urlGoat + "listarvuelos");
     }
